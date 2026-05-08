@@ -10,7 +10,7 @@ require('./utils.js');
 
 const express = require('express');
 const session = require('express-session');
-const MongoStore = require('connect-mongo').default;
+const MongoStore = require('connect-mongo');
 const bcrypt = require('bcrypt');
 const saltRounds = 12;
 

@@ -1,0 +1,11 @@
+<li class="list-group-item d-flex justify-content-between align-items-center">
+    <div>
+        <strong><%= user.username %></strong> (<%= user.email %>) 
+        <br>
+        <span class="badge bg-secondary">Role: <%= user.user_type %></span>
+    </div>
+    <div>
+        <a href="/promote?email=<%= user.email %>" class="btn btn-sm btn-success">Promote</a>
+        <a href="/demote?email=<%= user.email %>" class="btn btn-sm btn-warning">Demote</a>
+    </div>
+</li>

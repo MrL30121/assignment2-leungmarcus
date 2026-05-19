@@ -1,0 +1,30 @@
+<%- include('templates/header') %>
+
+<main class="form-signin w-100 m-auto d-flex flex-column align-items-center justify-content-center" style="min-height: 75vh;">
+    <div class="p-4 card shadow-sm" style="width: 100%; max-width: 350px; border-radius: 10px;">
+        <form action="/loggingin" method="POST">
+            <h1 class="h3 mb-3 fw-normal text-center">Log In</h1>
+            
+            <% if (typeof error !== 'undefined') { %>
+                <div class="alert alert-danger"><%= error %></div>
+            <% } %>
+
+            <div class="form-floating mb-2">
+                <input name="email" type="email" class="form-control" id="floatingLoginEmail" placeholder="name@example.com" required>
+                <label for="floatingLoginEmail">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input name="password" type="password" class="form-control" id="floatingLoginPassword" placeholder="Password" required>
+                <label for="floatingLoginPassword">Password</label>
+            </div>
+
+            <button class="w-100 btn btn-lg btn-primary shadow-sm" type="submit">Log In</button>
+            
+            <div class="text-center mt-3">
+                <a href="/signup" class="text-decoration-none text-primary fw-bold">Sign Up</a>
+            </div>
+        </form>
+    </div>
+</main>
+
+<%- include('templates/footer') %>

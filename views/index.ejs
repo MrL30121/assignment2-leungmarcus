@@ -1,0 +1,17 @@
+<%- include('templates/header') %>
+<main class="container my-5 text-center flex-shrink-0">
+    <% if (typeof name !== 'undefined' && name) { %>
+        <h1 class="display-5 fw-bold text-dark">Hello, <%= name %>.</h1>
+        <div class="mt-4">
+            <a href="/members" class="btn btn-info text-white fw-bold px-4 me-2">Members Area</a>
+            <a href="/logout" class="btn btn-outline-danger fw-bold px-4">Log Out</a>
+        </div>
+    <% } else { %>
+        <h1 class="display-5 fw-bold text-dark">Welcome</h1>
+        <div class="mt-4">
+            <a href="/signup" class="btn btn-info text-white fw-bold px-4 me-2">Sign Up</a>
+            <a href="/login" class="btn btn-outline-dark fw-bold px-4">Log In</a>
+        </div>
+    <% } %>
+</main>
+<%- include('templates/footer') %>
